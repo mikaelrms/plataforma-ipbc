@@ -1,9 +1,11 @@
+
+
 function Home () {
     return (    
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="text-4xl font-bold mb-4">Bem-vindo à Plataforma IPBC</h1>
+        <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+            <h1 className="text-4xl text-black font-bold mb-4">Bem-vindo à Plataforma IPBC</h1>
         </div>
     )
-
+    
 } 
 export default Home;
