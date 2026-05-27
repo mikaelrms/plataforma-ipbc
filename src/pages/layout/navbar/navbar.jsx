@@ -1,16 +1,15 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Menu, X, Church, LucideChurch } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const location = useLocation()
 
     const routes = [
-        { 
-            name: "Início", 
-            path: "/" 
-        },
+        { name: "Home", path: "/" },
+        { name: "Login", path: "/login" },
+        { name: "Monitoramento", path: "/monitoramento" },
     ]
 
     const isActive = (path) => location.pathname === path
@@ -20,12 +19,15 @@ const NavBar = () => {
         <nav className={`fixed top-4 md:top-[43px] left-1/2 -translate-x-1/2 w-[95%] max-w-[1280px] min-h-[70px] md:h-[106px] 
                         ${isHome ? "bg-[#1A2412]/85" : "bg-[#022411]/80"} backdrop-blur-md rounded-3xl md:rounded-[9999px] border border-white/12 
                         flex items-center justify-between px-6 md:px-8 z-50 transition-colors duration-500`}>
-
             <div className="flex items-center gap-3">
-                <div>
-                <LucideChurch></LucideChurch>
-                <span className="text-white font-bold tracking-widest text-sm md:text-base">IPBC</span>
-                </div>
+                <img
+                    src="/logo.jpeg"
+                    alt="Logo"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border border-white/20"
+                />
+                <span className="text-white font-bold tracking-widest text-sm md:text-base">
+                    MeuApp
+                </span>
             </div>
 
             <div className="hidden lg:flex items-center gap-2">

@@ -1,12 +1,10 @@
-import Home from "./pages/home/home";
-import NavBar from "./pages/layout/navbar/navbar";
+import Router from "./routes"
 
 function App() {
 
   return (
     <>
-    <Navbar />
-    <Home />
+      <Router />
     </>
   )
 }
